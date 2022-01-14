@@ -22,7 +22,7 @@ public class Player
         z = 0;
         winkvertglob = 0;
         winkhorglob = 0;
-        vhor = 2000;
+        vhor = 200;
         vvert = 0;
         vside = 0;
         masse = 1000;
