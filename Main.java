@@ -49,6 +49,7 @@ public class Main
             {
                 case 0:
                 System.out.println();
+                System.out.println();
                 System.out.println("Koordinaten:");
                 System.out.println(spieler.x);
                 System.out.println(spieler.y);
@@ -58,6 +59,7 @@ public class Main
             switch(seite)
             {
                 case 1:
+                System.out.println();
                 System.out.println();
                 System.out.println("Geschwindigkeiten:");
                 System.out.println("Vertikal / Seitlich / Power:");
@@ -69,6 +71,8 @@ public class Main
             switch(seite)
             {
                 case 2:
+                System.out.println();
+                System.out.println();
                 System.out.println("Beschleunigungen:");
                 System.out.println();
                 System.out.println("Vertikal / Horizonatal / Seitlich:");
@@ -79,11 +83,21 @@ public class Main
             switch(seite)
             {
                 case 3:
+                System.out.println();
+                System.out.println();
                 System.out.println("Winkel:");
                 System.out.println("Alpha / Beta / Gamma:");
                 System.out.println(spieler.alpha + " " + spieler.beta + " " + spieler.gamma);
                 System.out.println("Vertikal / Horizonatal:");
                 System.out.println(spieler.vertwinkelbewegung + " " + spieler.horwinkelbewegung);
+                break;
+            }
+            switch(seite)
+            {
+                case 3:
+                System.out.println();
+                System.out.println();
+                
                 break;
             }
             
@@ -112,11 +126,11 @@ public class Main
                         break;
                     case '+':
                         seite++;
-                        if(seite>3)seite=0;
+                        if(seite>4)seite=0;
                         break;
                     case '-':
                         seite--;
-                        if(seite<0)seite=3;
+                        if(seite<0)seite=4;
                         break;
                     default:
                     System.out.println("Kein gültiges Zeichen");

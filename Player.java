@@ -10,12 +10,13 @@ public class Player
     int winkhorglob, winkvertglob,masse;
     double ywinkel,vvert,vside,vhor,vertwinkelbewegung,horwinkelbewegung,power,drag,lift,alpha,beta,gamma,zeit,v;
     long letztezeit,diesezeit;
+    boolean laser;
     
     public Player()
     {
         // Variablen
         
-               
+        laser = false; 
         x = 100;
         y = 1000;
         z = 0;
@@ -84,11 +85,13 @@ public class Player
     }
     
     public double vertbeschl(){
+        System.out.println(lift*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma)));
         return (            power*Math.sin(Math.toRadians(alpha)) 
                             - drag*Math.sin(Math.toRadians(alpha)) 
                             + lift*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
-                            )
+                            - masse * 9.81)
                             /masse;
+                            
     }
     
     public double horbeschl(){
