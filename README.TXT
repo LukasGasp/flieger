@@ -1,17 +1,15 @@
 ------------------------------------------------------------------------
-Dies ist die README-Datei des Projekts. Hier sollten Sie Ihr Projekt
-beschreiben.
-Erzählen Sie dem Leser (jemand, der nichts über dieses Projekt weiss),
-alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar 
-zumindest die folgenden Angaben umfassen:
+Dies ist das Informatik Projekt von Michael und Lukas...
 ------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG:
-PROJEKTZWECK:
-VERSION oder DATUM:
-WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN):
-BENUTZERHINWEISE:
+PROJEKTBEZEICHNUNG:             Flieger
+PROJEKTZWECK:                   Informatik Arbeit
+VERSION:                        V.0.5.2
+WIE IST DAS PROJEKT ZU STARTEN: BlueJ
+AUTOR(EN):                      Michael, Lukas
+BENUTZERHINWEISE:               Sie müssen fliegen können
+
+Steuerung:
 
 Turbinen beschleunigen: o
 Turbinen entschleunigen: l
