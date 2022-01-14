@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Laser
+comment1.params=
+comment1.target=Laser()
+comment2.params=winkel1\ winkel2\ winkel3
+comment2.target=void\ rotiere(double,\ double,\ double)
+comment3.params=xi\ yi\ zi
+comment3.target=void\ setzeposition(double,\ double,\ double)
+comment4.params=
+comment4.target=void\ verschwinde()
+numComments=5

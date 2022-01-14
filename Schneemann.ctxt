@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Schneemann
+comment1.params=x\ y\ z
+comment1.target=Schneemann(int,\ int,\ int)
+comment2.params=
+comment2.target=void\ delete()
+numComments=3
