@@ -32,9 +32,9 @@ public class Main
         Random rand = new Random(); 
         
         enemylist = new List<Schneemann>();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 400; i++) {
             System.out.println("Scheemann " + i + "erstellt.");
-            enemy = new Schneemann(20000, 0 + rand.nextInt(1000), -20000 + rand.nextInt(20000));
+            enemy = new Schneemann(1000 + rand.nextInt(20000), 0 + rand.nextInt(10000), -20000 + rand.nextInt(20000));
             enemylist.append(enemy);
         }
         this.fuehreaus();
@@ -125,8 +125,10 @@ public class Main
                         spieler.power=spieler.power+5000;
                         break;
                     case 'l':
-                        spieler.power=spieler.power-5000;
-                        break;
+                        if(spieler.power <= 5000){
+                            spieler.power=spieler.power-5000;
+                            break;
+                        }
                     case '+':
                         seite++;
                         if(seite>4)seite=0;
