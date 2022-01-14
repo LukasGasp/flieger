@@ -125,7 +125,7 @@ public class Main
                         spieler.power=spieler.power+5000;
                         break;
                     case 'l':
-                        if(spieler.power <= 5000){
+                        if(spieler.power >= 5000){
                             spieler.power=spieler.power-5000;
                             
                         }

@@ -86,9 +86,9 @@ public class Player
     
     public double vertbeschl(){
         //System.out.println( lift*Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma))) ;
-        System.out.println(lift(vhor));
+        System.out.println(liftcoefficient());
         return (            power*Math.sin(Math.toRadians(alpha)) 
-                            - drag(v)
+                            - drag(vhor)
                             + lift(vhor)*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
                             - masse * 9.81)
                             /masse;
@@ -112,7 +112,7 @@ public class Player
     
     public double drag(double temp){
         //v = Math.sqrt(Math.pow(vhor,2)+Math.pow(vvert,2));
-        return dragcoefficient() * 5 * 1.225 * Math.pow(temp,2) / 2;
+        return dragcoefficient() * 10 * 1.225 * Math.pow(temp,2) / 2;
         
     }
     
