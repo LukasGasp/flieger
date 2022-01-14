@@ -17,10 +17,10 @@ Wir gehen davon aus, dass dem Spieler die Gesetzte der Aerodynamik bekannt sind.
 
 ![forces](https://user-images.githubusercontent.com/72341833/149591342-965aa6f5-e0e1-4934-bc57-c9db41a18560.jpg)
 
-Turbinen beschleunigen: o
-Turbinen entschleunigen: l
-Steuerung: w, a, s, d
-Infos: + / -
+Turbinen beschleunigen: o  
+Turbinen entschleunigen: l  
+Steuerung: w, a, s, d  
+Infos: + / -  
 
 <blink>WIR EMPFEHLEN UNBEDINGT DIE KONSOLE OFFEN ZU HALTEN!</blink>
 Wenn man im Hauptfenster + oder - drückt ändern sich die anezeigten Werte. Es gibt: 
