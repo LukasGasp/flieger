@@ -127,8 +127,9 @@ public class Main
                     case 'l':
                         if(spieler.power <= 5000){
                             spieler.power=spieler.power-5000;
-                            break;
+                            
                         }
+                        break;
                     case '+':
                         seite++;
                         if(seite>4)seite=0;
