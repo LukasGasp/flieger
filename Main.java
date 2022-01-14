@@ -1,5 +1,6 @@
 import GLOOP.*;
 import basis.*;
+import java.util.Random;
 
 public class Main
 {   
@@ -27,11 +28,13 @@ public class Main
         landschaft = new Landschaft();
 
         t = new GLTastatur();
-
+        
+        Random rand = new Random(); 
+        
         enemylist = new List<Schneemann>();
         for (int i = 0; i < 50; i++) {
             System.out.println("Scheemann " + i + "erstellt.");
-            enemy = new Schneemann(20000, 200, 0 + i);
+            enemy = new Schneemann(20000, 0 + rand.nextInt(1000), -20000 + rand.nextInt(20000));
             enemylist.append(enemy);
         }
         this.fuehreaus();
