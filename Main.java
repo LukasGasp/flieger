@@ -50,7 +50,7 @@ public class Main
             spieler.bewegdich();
             switch(seite)
             {
-                case 0:
+                case 4:
                 System.out.println();
                 System.out.println();
                 System.out.println("Koordinaten:");
@@ -97,7 +97,7 @@ public class Main
             }
             switch(seite)
             {
-                case 3:
+                case 0:
                 System.out.println();
                 System.out.println();
                 

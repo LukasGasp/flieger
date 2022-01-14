@@ -86,9 +86,9 @@ public class Player
     
     public double vertbeschl(){
         //System.out.println( lift*Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma))) ;
-        // System.out.println();
+        System.out.println(lift(vhor));
         return (            power*Math.sin(Math.toRadians(alpha)) 
-                            - drag(v)*Math.sin(Math.toRadians(alpha)) 
+                            - drag(v)
                             + lift(vhor)*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
                             - masse * 9.81)
                             /masse;
@@ -97,14 +97,14 @@ public class Player
     
     public double horbeschl(){
         return (    power * Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(beta))
-                    - drag(vhor) * Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(beta))
+                    - drag(vhor)
                     - lift(vhor) * (Math.sin(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma)) * Math.cos(Math.toRadians(beta)) + Math.sin(Math.toRadians(gamma)) * Math.sin(Math.toRadians(beta))  ))
                     /masse;
     }
     
     public double sidebeschl(){
         return (    power * Math.cos(Math.toRadians(alpha)) * Math.sin(Math.toRadians(beta))
-                    - drag(vside) * Math.cos(Math.toRadians(alpha)) * Math.sin(Math.toRadians(beta))
+                    - drag(vside)
                     - lift(vside) * (Math.sin(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma)) * Math.sin(Math.toRadians(beta)) * Math.cos(Math.toRadians(beta)) + Math.sin(Math.toRadians(gamma)) * Math.cos(Math.toRadians(beta))  
                     ))
                     /masse;
@@ -129,6 +129,7 @@ public class Player
     
     public double liftcoefficient(){
         if(angleofattack()<=18) return angleofattack()*0.074+0.37;
+        
         else return - angleofattack()*0.074+8.362;
     }
     
