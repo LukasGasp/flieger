@@ -87,7 +87,7 @@ public class Player
         return (            power*Math.sin(Math.toRadians(alpha)) 
                             - drag*Math.sin(Math.toRadians(alpha)) 
                             + lift*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
-                            - masse*9.81 )
+                            )
                             /masse;
     }
     

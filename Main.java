@@ -62,6 +62,8 @@ public class Main
                 System.out.println("Geschwindigkeiten:");
                 System.out.println("Vertikal / Seitlich / Power:");
                 System.out.println(spieler.vvert + " " + spieler.vside + " " + spieler.power);
+                System.out.println("HORIZONTAL:");
+                System.out.println(spieler.vhor);
                 break;
             }
             switch(seite)
@@ -111,6 +113,10 @@ public class Main
                     case '+':
                         seite++;
                         if(seite>3)seite=0;
+                        break;
+                    case '-':
+                        seite--;
+                        if(seite<0)seite=3;
                         break;
                     default:
                     System.out.println("Kein gültiges Zeichen");
