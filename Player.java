@@ -85,10 +85,11 @@ public class Player
     }
     
     public double vertbeschl(){
-        System.out.println(lift*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma)));
+        //System.out.println( lift*Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma))) ;
+        // System.out.println();
         return (            power*Math.sin(Math.toRadians(alpha)) 
                             - drag*Math.sin(Math.toRadians(alpha)) 
-                            + lift*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
+                            + lift(v)*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
                             - masse * 9.81)
                             /masse;
                             
@@ -147,9 +148,13 @@ public class Player
         diesezeit = System.currentTimeMillis();
         zeit = diesezeit - letztezeit;
         
+        v = Math.sqrt(Math.pow(vhor,2)+Math.pow(vvert,2));
+        
         vvert = vvert + vertbeschl()*(zeit/1000);
         vhor = vhor + horbeschl()*(zeit/1000);
         vside = vside + sidebeschl()*(zeit/1000);
+        
+        
         
         neuehorgesch();
         
