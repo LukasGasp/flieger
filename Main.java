@@ -44,9 +44,18 @@ public class Main
         running = true;
         //spieler.hoehe(30);
         spieler.vvert = 0;
+        Random rand = new Random();
         while(running){
             Hilfe.pause(5);
             //spieler.gehe(10);
+            if(0 + rand.nextInt(10000) == 5){
+                int random = 0 + rand.nextInt(400);
+                enemylist.toFirst();
+                enemylist.getContent().delete();
+                enemylist.setContent(null);
+                enemylist.toLast();
+                enemylist.setContent(_pContent_);
+            }
             spieler.bewegdich();
             switch(seite)
             {
@@ -125,7 +134,7 @@ public class Main
                         spieler.power=spieler.power+5000;
                         break;
                     case 'l':
-                        if(spieler.power <= 5000){
+                        if(spieler.power >= 5000){
                             spieler.power=spieler.power-5000;
                             
                         }
