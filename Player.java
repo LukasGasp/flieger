@@ -88,7 +88,7 @@ public class Player
         //System.out.println( lift*Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma))) ;
         // System.out.println();
         return (            power*Math.sin(Math.toRadians(alpha)) 
-                            - drag*Math.sin(Math.toRadians(alpha)) 
+                            - drag(v)*Math.sin(Math.toRadians(alpha)) 
                             + lift(v)*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
                             - masse * 9.81)
                             /masse;
