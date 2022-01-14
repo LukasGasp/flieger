@@ -8,34 +8,35 @@ public class Main
     Player spieler;
     Schneemann enemy;
     // io
-        
+
     GLTastatur t; // Tastatur
     GLMaus m;
-    
+
     // Variablen
-    
+
     boolean running;
-    
+    int seite;
+
     // Schneemannliste
-    
+
     List<Schneemann> enemylist;
-    
+
     public Main()
     {   
         spieler = new Player();
         landschaft = new Landschaft();
-        
+
         t = new GLTastatur();
-        
+
         enemylist = new List<Schneemann>();
         for (int i = 0; i < 50; i++) {
-          System.out.println("Scheemann " + i + "erstellt.");
-          enemy = new Schneemann(20000, 200, 0 + i);
-          enemylist.append(enemy);
+            System.out.println("Scheemann " + i + "erstellt.");
+            enemy = new Schneemann(20000, 200, 0 + i);
+            enemylist.append(enemy);
         }
         this.fuehreaus();
     }
-    
+
     private void fuehreaus(){
         running = true;
         //spieler.hoehe(30);
@@ -44,54 +45,79 @@ public class Main
             Hilfe.pause(5);
             //spieler.gehe(10);
             spieler.bewegdich();
-            System.out.println();
-            System.out.println("Koordinaten:");
-            System.out.println(spieler.x);
-            System.out.println(spieler.y);
-            System.out.println(spieler.z);
-            System.out.println();
-            System.out.println("Geschwindigkeiten:");
-            System.out.println("Vertikal / Seitlich / Power:");
-            System.out.println(spieler.vvert + " " + spieler.vside + " " + spieler.power);
-            System.out.println("Beschleunigungen:");
-            System.out.println();
-            System.out.println("Vertikal / Horizonatal / Seitlich:");
-            System.out.println(spieler.vertbeschl() + " " + spieler.horbeschl()+ " " + spieler.sidebeschl());
-            System.out.println();
-            System.out.println("Winkel:");
-            System.out.println("Alpha / Beta / Gamma:");
-            System.out.println(spieler.alpha + " " + spieler.beta + " " + spieler.gamma);
-            System.out.println("Vertikal / Horizonatal:");
-            System.out.println(spieler.vertwinkelbewegung + " " + spieler.horwinkelbewegung);
+            switch(seite)
+            {
+                case 0:
+                System.out.println();
+                System.out.println("Koordinaten:");
+                System.out.println(spieler.x);
+                System.out.println(spieler.y);
+                System.out.println(spieler.z);
+                break;
+            }
+            switch(seite)
+            {
+                case 1:
+                System.out.println();
+                System.out.println("Geschwindigkeiten:");
+                System.out.println("Vertikal / Seitlich / Power:");
+                System.out.println(spieler.vvert + " " + spieler.vside + " " + spieler.power);
+                break;
+            }
+            switch(seite)
+            {
+                case 2:
+                System.out.println("Beschleunigungen:");
+                System.out.println();
+                System.out.println("Vertikal / Horizonatal / Seitlich:");
+                System.out.println(spieler.vertbeschl() + " " + spieler.horbeschl()+ " " + spieler.sidebeschl());
+                System.out.println();
+                break;
+            }
+            switch(seite)
+            {
+                case 3:
+                System.out.println("Winkel:");
+                System.out.println("Alpha / Beta / Gamma:");
+                System.out.println(spieler.alpha + " " + spieler.beta + " " + spieler.gamma);
+                System.out.println("Vertikal / Horizonatal:");
+                System.out.println(spieler.vertwinkelbewegung + " " + spieler.horwinkelbewegung);
+                break;
+            }
+            
             if(t.wurdeGedrueckt()){ 
                 switch(t.gibZeichen()){
-                case 'w':
+                    case 'w':
                     spieler.pitch(1);
                     break;
-                //case 's':
-                //    spieler.gehe(-10);
-                //    break;
-                case 's':
-                    spieler.pitch(-1);
-                    break;
-                case 'a':
-                    spieler.yaw(-1);
-                    break;
-                case 'd':
-                    spieler.yaw(1);
-                    break;
-                case 'o':
-                    spieler.power=spieler.power+5000;
-                    break;
-                case 'l':
-                    spieler.power=spieler.power-5000;
-                    break;
-                default:
+                    //case 's':
+                    //    spieler.gehe(-10);
+                    //    break;
+                    case 's':
+                        spieler.pitch(-1);
+                        break;
+                    case 'a':
+                        spieler.yaw(-1);
+                        break;
+                    case 'd':
+                        spieler.yaw(1);
+                        break;
+                    case 'o':
+                        spieler.power=spieler.power+5000;
+                        break;
+                    case 'l':
+                        spieler.power=spieler.power-5000;
+                        break;
+                    case '+':
+                        seite++;
+                        if(seite>3)seite=0;
+                        break;
+                    default:
                     System.out.println("Kein gültiges Zeichen");
                     break;
                 }
             }
-            
-            }
+
         }
+    }
     }
