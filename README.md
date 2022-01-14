@@ -9,7 +9,15 @@ WIE IST DAS PROJEKT ZU STARTEN: BlueJ
 AUTOR(EN):                      Michael, Lukas
 BENUTZERHINWEISE:               Sie müssen fliegen können
 
+Spielidee: 
+
+Man steuert ein exakt 2000 kg schweres Flugzeug, welches eine Kraft von 30000 kilonewton aufbringen kann. Gemäß folgender Veröffentlichungen der NASA haben wir Formeln extrahiert, verarbeitet und implementiert.
+
 Steuerung:
+
+Wir gehen davon aus, dass dem Spieler die Gesetzte der Aerodynamik bekannt sind. Hier eine kurze Erinnerung an Kräfte, welche auf ein Flugzeug wirken:
+
+
 
 Turbinen beschleunigen: o
 Turbinen entschleunigen: l
