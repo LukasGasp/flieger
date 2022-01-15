@@ -201,4 +201,18 @@ public class Player
         y=kamera0.gibY();
         z=kamera0.gibZ();
     }
+    
+    // Um Probleme mit Variablentypen vorzubeugen
+    
+    public int getx(){
+        return (int) x;
+    }
+    
+    public int gety(){
+        return (int) y;
+    }
+    
+    public int getz(){
+        return (int) z;
+    }
 }

@@ -1,4 +1,6 @@
 import GLOOP.*;
+import basis.*;
+
 public class Schneemann
 {
     //objekte werden erzeugt
@@ -39,6 +41,16 @@ public class Schneemann
     }    
     
     public void delete(){
+        // GLOOP aktualisiert beim Loschen nicht die Sichtbarkeit
+        kugel1.setzeSichtbarkeit(false);
+        kugel2.setzeSichtbarkeit(false);
+        kugel3.setzeSichtbarkeit(false);
+        auge1.setzeSichtbarkeit(false);
+        auge2.setzeSichtbarkeit(false);
+        kegel.setzeSichtbarkeit(false);
+        zylinder1.setzeSichtbarkeit(false);
+        zylinder2.setzeSichtbarkeit(false);
+        Hilfe.pause(5); // Sonst ist das Unsichtbar machen noch nicht fertig. (Wussten nicht, dass java multithreaded ist!?)
         kugel1.loescheDich();
         kugel2.loescheDich();
         kugel3.loescheDich();
@@ -47,5 +59,16 @@ public class Schneemann
         kegel.loescheDich();
         zylinder1.loescheDich();
         zylinder2.loescheDich();
+        
+        //kugel1 = null;
+        //kugel2 = null;
+        //kugel3 = null;
+        //auge1 = null;
+        //auge2 = null;
+        //kegel = null;
+        //zylinder1 = null;
+        //zylinder2 = null;
+        
+        //System.gc(); // Garbage Collector manuell dazu anregen seinen Job zu machen. (Hat FPS massiv verbessert)
     }
 }

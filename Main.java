@@ -32,9 +32,12 @@ public class Main
         Random rand = new Random(); 
         
         enemylist = new List<Schneemann>();
-        for (int i = 0; i < 400; i++) {
-            System.out.println("Scheemann " + i + "erstellt.");
-            enemy = new Schneemann(1000 + rand.nextInt(20000), 0 + rand.nextInt(10000), -20000 + rand.nextInt(20000));
+        for (int i = 0; i < 50; i++) {
+            enemy = new Schneemann(
+            -50000 + spieler.getx() + rand.nextInt(100000),
+            -50000 + spieler.gety() + rand.nextInt(100000),
+            -50000 + spieler.getz() + rand.nextInt(100000)
+            );
             enemylist.append(enemy);
         }
         this.fuehreaus();
@@ -44,9 +47,26 @@ public class Main
         running = true;
         //spieler.hoehe(30);
         spieler.vvert = 0;
+        
+        Random rand = new Random();
+        System.out.println("Im Spiel + / - drücken, um durch Infos zu stöbern.");
         while(running){
             Hilfe.pause(5);
             //spieler.gehe(10);
+            
+            int random = 0 + rand.nextInt(400);
+            enemylist.toFirst();
+            enemylist.getContent().delete();    // Objekte löschen
+            Hilfe.pause(5);
+            enemylist.setContent(null);         // Garbage Collector löscht eher, wenn der Wert null ist
+            enemy = new Schneemann(
+            -10000 + spieler.getx() + rand.nextInt(20000),
+            -10000 + spieler.gety() + rand.nextInt(20000),
+            -10000 + spieler.getz() + rand.nextInt(20000)
+            );
+            enemylist.toLast();
+            enemylist.setContent(enemy);
+            
             spieler.bewegdich();
             switch(seite)
             {
