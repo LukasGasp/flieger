@@ -46,7 +46,7 @@ public class Main
     private void fuehreaus(){
         running = true;
         //spieler.hoehe(30);
-        spieler.vvert = 0;
+        spieler.getvvert() = 0;
         
         Random rand = new Random();
         System.out.println("Im Spiel + / - drücken, um durch Infos zu stöbern.");
@@ -63,21 +63,23 @@ public class Main
             -10000 + spieler.getx() + rand.nextInt(20000),
             -10000 + spieler.gety() + rand.nextInt(20000),
             -10000 + spieler.getz() + rand.nextInt(20000)
-            );
+            ); //Neuer Schneemann wird erzeugt
             enemylist.toLast();
             enemylist.setContent(enemy);
             
+            //Kamera wird bewegt
             spieler.bewegdich();
             
+            //Einzelne Konsolenseiten werden angezeigt(zum debugging)
             switch(seite)
             {
                 case 4:
                 System.out.println();
                 System.out.println();
                 System.out.println("Koordinaten:");
-                System.out.println(spieler.x);
-                System.out.println(spieler.y);
-                System.out.println(spieler.z);
+                System.out.println(spieler.getx());
+                System.out.println(spieler.gety());
+                System.out.println(spieler.getz());
                 break;
             }
             switch(seite)
@@ -87,9 +89,9 @@ public class Main
                 System.out.println();
                 System.out.println("Geschwindigkeiten:");
                 System.out.println("Vertikal / Seitlich / Power:");
-                System.out.println(spieler.vvert + " " + spieler.vside + " " + spieler.power);
+                System.out.println(spieler.getvvert() + " " + spieler.getvside() + " " + spieler.power);
                 System.out.println("HORIZONTAL:");
-                System.out.println(spieler.vhor);
+                System.out.println(spieler.getvhor());
                 break;
             }
             switch(seite)
@@ -111,9 +113,9 @@ public class Main
                 System.out.println();
                 System.out.println("Winkel:");
                 System.out.println("Alpha / Beta / Gamma:");
-                System.out.println(spieler.alpha + " " + spieler.beta + " " + spieler.gamma);
+                System.out.println(spieler.getalpha() + " " + spieler.getbeta() + " " + spieler.getgamma());
                 System.out.println("Vertikal / Horizonatal:");
-                System.out.println(spieler.vertwinkelbewegung + " " + spieler.horwinkelbewegung);
+                System.out.println(spieler.getvertwinkelbewegung() + " " + spieler.gethorwinkelbewegung());
                 break;
             }
             switch(seite)

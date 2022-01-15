@@ -4,19 +4,19 @@ public class Player
     // Objekte
     GLSchwenkkamera kamera0;
     
-    double x;
-    double y;
-    double z;
-    int winkhorglob, winkvertglob,masse;
-    double ywinkel,vvert,vside,vhor,vertwinkelbewegung,horwinkelbewegung,power,drag,lift,alpha,beta,gamma,zeit,v;
-    long letztezeit,diesezeit;
-    boolean laser;
+    private double x;
+    private double y;
+    private double z;
+    private int winkhorglob, winkvertglob,masse;
+    private double ywinkel,vvert,vside,vhor,vertwinkelbewegung,horwinkelbewegung,drag,lift,alpha,beta,gamma,zeit,v;
+    private long letztezeit,diesezeit;
     
+    double power;
     public Player()
     {
-        // Variablen
+        // Variablen werden initialisiert
         
-        laser = false; 
+        
         x = 100;
         y = 1000;
         z = 0;
@@ -215,5 +215,13 @@ public class Player
     
     public int getz(){
         return (int) z;
+    }
+    
+    public double getvvert(){
+        return  vvert;
+    }
+    
+    public double getvhor(){
+        return  vhor;
     }
 }

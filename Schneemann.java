@@ -9,9 +9,16 @@ public class Schneemann
     private GLKegel kegel;
     private GLTextur textur,texturleder,texturkarotte,texturstein;
     
+    int x,y,z;
+    
     
     public Schneemann(int x,int y,int z)
     {
+        //ints werden übergeben
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        
         //texturen werden erzeugt
         textur = new GLTextur("schnee.jfif");
         texturleder = new GLTextur("leder.jfif");
