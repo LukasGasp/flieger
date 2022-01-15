@@ -52,12 +52,12 @@ public class Main
         while(running){
             Hilfe.pause(5);
             
-            if(rand.nextInt(100) == 0){
+            if(rand.nextInt(1000) == 0){
                 enemylist.toFirst();
                 enemy = new Schneemann(
-                -10000 + spieler.getx() + rand.nextInt(20000),
-                -10000 + spieler.gety() + rand.nextInt(20000),
-                -10000 + spieler.getz() + rand.nextInt(20000)
+                -5000 + spieler.getx() + rand.nextInt(10000),
+                -5000 + spieler.gety() + rand.nextInt(10000),
+                -5000 + spieler.getz() + rand.nextInt(10000)
                 ); //Neuer Schneemann wird erzeugt
                 for (int i = 0; i < 0 + rand.nextInt(49); i++){
                     enemylist.next();
