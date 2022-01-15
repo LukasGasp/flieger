@@ -86,7 +86,7 @@ public class Player
     
     public double vertbeschl(){
         //System.out.println( lift*Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma))) ;
-        System.out.println(liftcoefficient());
+        System.out.println(angleofattack());
         return (            power*Math.sin(Math.toRadians(alpha)) 
                             - drag(vhor)
                             + lift(vhor)*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
@@ -135,7 +135,8 @@ public class Player
     
     public double angleofattack()
     {
-        return alpha - winkvertglob;
+        
+        return alpha - vertwinkelbewegung;
     }
     
     public void bewegdich(){

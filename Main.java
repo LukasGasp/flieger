@@ -48,6 +48,7 @@ public class Main
             Hilfe.pause(5);
             //spieler.gehe(10);
             spieler.bewegdich();
+            
             switch(seite)
             {
                 case 4:
