@@ -103,7 +103,7 @@ public class Main
                 System.out.println();
                 System.out.println("Geschwindigkeiten:");
                 System.out.println("Vertikal / Seitlich / Power:");
-                System.out.println(spieler.getvvert() + " " + spieler.getvside() + " " + spieler.power);
+                System.out.println(spieler.getvvert() + " " + spieler.getvside() + " " + spieler.getpower());
                 System.out.println("HORIZONTAL:");
                 System.out.println(spieler.getvhor());
                 break;
@@ -157,13 +157,13 @@ public class Main
                         spieler.yaw(1);
                         break;
                     case 'o':
-                        if(spieler.power < 30000){
-                            spieler.power=spieler.power+5000;
+                        if(spieler.getpower() < 30000){
+                            spieler.setpower(spieler.power+5000);
                             break;
                         }
                     case 'l':
-                        if(spieler.power >= 5000){
-                            spieler.power=spieler.power-5000;
+                        if(spieler.getpower() >= 5000){
+                            spieler.setpower(spieler.power-5000);
                             
                         }
                         break;

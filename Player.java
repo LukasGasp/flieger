@@ -130,26 +130,20 @@ public class Player
     
     //Flugzeugphysics Ende
     
-    public void bewegdich(){
-        //kamera0.setzePosition(x + tempx, y + tempy, z + tempz);
-        double tempx;
-        double tempy;
-        double tempz;
-        
-        
+    public void bewegdich(){ //Flugzeug wird bewegt
         
         diesezeit = System.currentTimeMillis();
-        zeit = diesezeit - letztezeit;
+        zeit = diesezeit - letztezeit; //zeit gibt die zeitlichen abstände zwischen durchgängen an, um die Physik akkurat darzustellen
         
         v = Math.sqrt(Math.pow(vhor,2)+Math.pow(vvert,2));
         
         vvert = vvert + vertbeschl()*(zeit/1000);
         vhor = vhor + horbeschl()*(zeit/1000);
-        vside = vside + sidebeschl()*(zeit/1000);
+        vside = vside + sidebeschl()*(zeit/1000); 
         
         
         
-        neuehorgesch();
+        neuehorgesch(); 
         
         vertwinkelbewegung = Math.toDegrees(Math.atan(vvert/vhor));
         
@@ -157,17 +151,19 @@ public class Player
         bewegezu(x + Math.cos(Math.toRadians(horwinkelbewegung))*vhor*(zeit/1000),
         y + vvert*(zeit/1000),
         z  + Math.sin(Math.toRadians(horwinkelbewegung))*vhor*(zeit/1000)
-        );
+        ); //Die eigentliche Bewegung der Kamera
         
         kamera0.setzeBlickpunkt(x + Math.cos(Math.toRadians(winkhorglob)) * Math.cos(Math.toRadians(winkvertglob)) *100,
                                Math.sin(Math.toRadians(winkvertglob)) * 100+ y, 
-                               z  + Math.sin(Math.toRadians(winkhorglob)) * Math.cos(Math.toRadians(winkvertglob)) *100);
+                               z  + Math.sin(Math.toRadians(winkhorglob)) * Math.cos(Math.toRadians(winkvertglob)) *100); //Einstellung des Blickwinkels der Kamera
         x=kamera0.gibX();
         y=kamera0.gibY();
-        z=kamera0.gibZ();
+        z=kamera0.gibZ(); //Kamerakoordinaten werden regelmäßig wieder abgefragt
         letztezeit = System.currentTimeMillis();
         
     }
+    
+    //Winkel der Kamera Methoden
     
     public void yaw(double winkel){
         
@@ -236,5 +232,15 @@ public class Player
     
      public double getvside(){
         return  vside;
+    }
+    
+    public double getpower(){
+        return  power;
+    }
+    
+    
+    //ein setter
+    public void setpower(double temp){
+        power = temp;
     }
 }
