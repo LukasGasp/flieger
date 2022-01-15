@@ -71,12 +71,12 @@ public class Main
             enemylist.toFirst();
             while (enemylist.hasAccess()) {
                 System.out.println(enemylist.getContent().getx());
-                if(spieler.getx() <= enemylist.getContent().getx()+5000
-                && spieler.getx() >= enemylist.getContent().getx()-5000
-                && spieler.gety() <= enemylist.getContent().gety()+5000
-                && spieler.gety() >= enemylist.getContent().gety()-5000 
-                && spieler.getz() <= enemylist.getContent().getz()+5000
-                && spieler.getz() >= enemylist.getContent().getz()-5000){
+                if(spieler.getx() <= enemylist.getContent().getx()+500
+                && spieler.getx() >= enemylist.getContent().getx()-500
+                && spieler.gety() <= enemylist.getContent().gety()+500
+                && spieler.gety() >= enemylist.getContent().gety()-500 
+                && spieler.getz() <= enemylist.getContent().getz()+500
+                && spieler.getz() >= enemylist.getContent().getz()-500){
                    Sys.erstelleAusgabe("Gratulation"); 
                 }
                 enemylist.next();
