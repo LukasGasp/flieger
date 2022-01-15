@@ -68,10 +68,9 @@ public class Main
             
             //Kamera wird bewegt
             spieler.bewegdich();
-            
-            for (int i = 0; i < 1; i++) {
+            enemylist.toFirst();
+            while (enemylist.hasAccess()) {
                 enemylist.next();
-                if(i == 49)enemylist.toFirst();
                 if(spieler.getx()<enemylist.getContent().x+50&& spieler.getx()>enemylist.getContent().x-50&&    spieler.gety()<enemylist.getContent().y+50&& spieler.gety()>enemylist.getContent().y-50 &&spieler.getz()<enemylist.getContent().z+50&& spieler.getz()>enemylist.getContent().z-50)System.out.println("Gratulation");
                 
             }
