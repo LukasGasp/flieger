@@ -71,12 +71,12 @@ public class Main
             enemylist.toFirst();
             while (enemylist.hasAccess()) {
                 enemylist.next();
-                if(spieler.getx()<enemylist.getContent().x+50
-                && spieler.getx()>enemylist.getContent().x-50
-                && spieler.gety()<enemylist.getContent().y+50
-                && spieler.gety()>enemylist.getContent().y-50 
-                &&spieler.getz()<enemylist.getContent().z+50
-                && spieler.getz()>enemylist.getContent().z-50){
+                if(spieler.getx() <= enemylist.getContent().x+50
+                && spieler.getx() >= enemylist.getContent().x-50
+                && spieler.gety() <= enemylist.getContent().y+50
+                && spieler.gety() >= enemylist.getContent().y-50 
+                && spieler.getz() <= enemylist.getContent().z+50
+                && spieler.getz() >= enemylist.getContent().z-50){
                    System.out.println("Gratulation"); 
                 }
                 
