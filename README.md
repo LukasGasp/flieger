@@ -51,3 +51,9 @@ Eine der Funktionen. Natürlich werden hier Gravitation, Auftrieb, Masse, etc. b
                   /masse;
   }
 ```
+
+<h2>Probleme</h2>
+Eine große Herausforderung war die GLOOP Bibliothek. Diese bietet KEINE möglichkeit die Kamera um ihre eigene Achse zu drehen. (Die rotieren Funktion funktioniert einfach nicht)
+Selbst das Kamera ausrichten bereitete Aufgrund dazu fehlender Funktionen (im Gegensatz zu Objekten) noch größere Probleme.
+Wir würden uns freuen für das nächste Projekt eine andere Bibliothek nutzen zu dürfen. 
+Trotzdem vielen Dank, dass wir von Basis zu Gloop wechseln durften.
