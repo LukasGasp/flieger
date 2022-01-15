@@ -58,12 +58,13 @@ public class Main
             //enemylist.getContent().delete();    // Objekte löschen
             //Hilfe.pause(5);
             //enemylist.setContent(null);         // Garbage Collector löscht eher, wenn der Wert null ist
+            enemylist.toFirst();
             enemy = new Schneemann(
             -10000 + spieler.getx() + rand.nextInt(20000),
             -10000 + spieler.gety() + rand.nextInt(20000),
             -10000 + spieler.getz() + rand.nextInt(20000)
             ); //Neuer Schneemann wird erzeugt
-            for (int i = 0; i < 0 + rand.nextInt(50); i++){
+            for (int i = 0; i < 0 + rand.nextInt(49); i++){
                 enemylist.next();
             }
             enemylist.getContent().delete();
