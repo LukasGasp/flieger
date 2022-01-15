@@ -9,7 +9,11 @@
 
 <h2>Spielidee:</h2>
 
-Man steuert ein exakt 2000 kg schweres Flugzeug, welches eine Kraft von 30000 kilonewton aufbringen kann. Gemäß folgender Veröffentlichungen der NASA haben wir Formeln extrahiert, verarbeitet und implementiert.
+Man steuert ein exakt 2000 kg schweres Flugzeug, welches eine Kraft von 30000 Newton aufbringen kann. Gemäß folgender Veröffentlichungen der NASA haben wir Formeln extrahiert, verarbeitet und implementiert.
+
+[Informatik.pdf](https://github.com/LukasGasp/flieger/files/7875854/Informatik.pdf)
+
+Man steuert dieses Flugzeug durch eine traumhafte Schneelandschaft. Um diese spannender zu machen (und den Arbeitsauftrag zu erfüllen) werden Schneemänner zufällig um den Spieler erzeugt. Das erste Element der Liste wird gelöscht und durch Zufall neu um den Spieler platziert. Der neue Scheemann wird ans Ende der Liste gehangen.
 
 <h2>Steuerung:</h2>
 
@@ -20,9 +24,12 @@ Wir gehen davon aus, dass dem Spieler die Gesetzte der Aerodynamik bekannt sind.
 Turbinen beschleunigen: o  
 Turbinen entschleunigen: l  
 Steuerung: w, a, s, d  
-Infos: + / -  
+Infos: + / - 
+Programm schließen: z
 
-<blink>WIR EMPFEHLEN UNBEDINGT DIE KONSOLE OFFEN ZU HALTEN!</blink>
+<h2>Konsole</h2>
+
+**WIR EMPFEHLEN UNBEDINGT DIE KONSOLE OFFEN ZU HALTEN!**  
 Wenn man im Hauptfenster + oder - drückt ändern sich die anezeigten Werte. Es gibt: 
 
 - Koordinaten
