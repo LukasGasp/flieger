@@ -70,13 +70,13 @@ public class Main
             spieler.bewegdich();
             enemylist.toFirst();
             while (enemylist.hasAccess()) {
-                
-                if(spieler.getx() <= enemylist.getContent().getx()+50
-                && spieler.getx() >= enemylist.getContent().getx()-50
-                && spieler.gety() <= enemylist.getContent().gety()+50
-                && spieler.gety() >= enemylist.getContent().gety()-50 
-                && spieler.getz() <= enemylist.getContent().getz()+50
-                && spieler.getz() >= enemylist.getContent().getz()-50){
+                System.out.println(enemylist.getContent().getx());
+                if(spieler.getx() <= enemylist.getContent().getx()+5000
+                && spieler.getx() >= enemylist.getContent().getx()-5000
+                && spieler.gety() <= enemylist.getContent().gety()+5000
+                && spieler.gety() >= enemylist.getContent().gety()-5000 
+                && spieler.getz() <= enemylist.getContent().getz()+5000
+                && spieler.getz() >= enemylist.getContent().getz()-5000){
                    System.out.println("Gratulation"); 
                 }
                 enemylist.next();
