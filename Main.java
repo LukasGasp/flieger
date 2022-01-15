@@ -77,7 +77,7 @@ public class Main
                 && spieler.gety() >= enemylist.getContent().gety()-5000 
                 && spieler.getz() <= enemylist.getContent().getz()+5000
                 && spieler.getz() >= enemylist.getContent().getz()-5000){
-                   System.out.println("Gratulation"); 
+                   Sys.erstelleAusgabe("Gratulation"); 
                 }
                 enemylist.next();
             }
