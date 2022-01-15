@@ -52,6 +52,7 @@ public class Main
         while(running){
             Hilfe.pause(5);
             
+            //in zufälligen abständen werden schneemänner zufällig entfernt
             if(rand.nextInt(1000) == 0){
                 enemylist.toFirst();
                 enemy = new Schneemann(
@@ -69,6 +70,7 @@ public class Main
             //Kamera wird bewegt
             spieler.bewegdich();
             enemylist.toFirst();
+            //Es wird geguckt ob die Schneemänner in einem Radius von 500 vom flugzeug sind
             while (enemylist.hasAccess()) {
                 System.out.println(enemylist.getContent().getx());
                 if(spieler.getx() <= enemylist.getContent().getx()+500
