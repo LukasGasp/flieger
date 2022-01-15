@@ -13,7 +13,7 @@ Man steuert ein exakt 2000 kg schweres Flugzeug, welches eine Kraft von 30000 Ne
 
 [Informatik.pdf](https://github.com/LukasGasp/flieger/files/7875854/Informatik.pdf)
 
-Man steuert dieses Flugzeug durch eine traumhafte Schneelandschaft. Um diese spannender zu machen (und den Arbeitsauftrag zu erfüllen) werden Schneemänner zufällig um den Spieler erzeugt. Das erste Element der Liste wird gelöscht und durch Zufall neu um den Spieler platziert. Der neue Scheemann wird ans Ende der Liste gehangen.
+Man steuert dieses Flugzeug durch eine traumhafte Schneelandschaft. Um diese spannender zu machen (und den Arbeitsauftrag zu erfüllen) werden Schneemänner zufällig um den Spieler erzeugt. Das erste Element der Liste wird gelöscht und durch Zufall neu um den Spieler platziert. Der neue Scheemann wird ans Ende der Liste gehangen. Im laufe des Spiels kommen immer mehr Schneemänner dazu. (Bis zu 50). So gibt es Möglichkeit Speedruns zu machen.
 
 <h2>Steuerung:</h2>
 

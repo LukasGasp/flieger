@@ -34,7 +34,7 @@ public class Main
         Random rand = new Random(); 
         
         enemylist = new List<Schneemann>();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 50; i++) { // Populate List
             enemy = new Schneemann(
             -50000 + spieler.getx() + rand.nextInt(100000),
             -50000 + spieler.gety() + rand.nextInt(100000),
@@ -50,7 +50,7 @@ public class Main
         Random rand = new Random();
         System.out.println("Im Spiel + / - drücken, um durch Infos zu stöbern.");
         while(running){
-            Hilfe.pause(5);
+            Hilfe.pause(20);
             
             //in zufälligen abständen werden schneemänner zufällig entfernt
             if(rand.nextInt(1000) == 0){

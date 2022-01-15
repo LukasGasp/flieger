@@ -2,7 +2,7 @@ import GLOOP.*;
 public class Player
 {   
     // Objekte
-    GLSchwenkkamera kamera0;
+    GLKamera kamera0;
     
     private double x;
     private double y;
@@ -32,7 +32,7 @@ public class Player
         
         // Objekte erzeugen        
         // Kamera:
-        kamera0 = new GLSchwenkkamera(1000,1000);
+        kamera0 = new GLKamera(1000,1000);
         
         kamera0.setzePosition(x, y, z);
         kamera0.zeigeAchsen(true);   
