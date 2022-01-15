@@ -1,3 +1,5 @@
+// Nicht implementiert
+
 import GLOOP.*;
 import basis.*;
 
