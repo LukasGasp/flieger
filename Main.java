@@ -51,24 +51,20 @@ public class Main
         System.out.println("Im Spiel + / - drücken, um durch Infos zu stöbern.");
         while(running){
             Hilfe.pause(5);
-            //spieler.gehe(10);
             
-            //int random = 0 + rand.nextInt(400);
-            //enemylist.toFirst();
-            //enemylist.getContent().delete();    // Objekte löschen
-            //Hilfe.pause(5);
-            //enemylist.setContent(null);         // Garbage Collector löscht eher, wenn der Wert null ist
-            enemylist.toFirst();
-            enemy = new Schneemann(
-            -10000 + spieler.getx() + rand.nextInt(20000),
-            -10000 + spieler.gety() + rand.nextInt(20000),
-            -10000 + spieler.getz() + rand.nextInt(20000)
-            ); //Neuer Schneemann wird erzeugt
-            for (int i = 0; i < 0 + rand.nextInt(49); i++){
-                enemylist.next();
+            if(rand.nextInt(100) == 0){
+                enemylist.toFirst();
+                enemy = new Schneemann(
+                -10000 + spieler.getx() + rand.nextInt(20000),
+                -10000 + spieler.gety() + rand.nextInt(20000),
+                -10000 + spieler.getz() + rand.nextInt(20000)
+                ); //Neuer Schneemann wird erzeugt
+                for (int i = 0; i < 0 + rand.nextInt(49); i++){
+                    enemylist.next();
+                }
+                enemylist.getContent().delete();
+                enemylist.setContent(enemy);
             }
-            enemylist.getContent().delete();
-            enemylist.setContent(enemy);
             
             //Kamera wird bewegt
             spieler.bewegdich();
