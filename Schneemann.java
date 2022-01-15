@@ -47,6 +47,21 @@ public class Schneemann
         auge2.setzeTextur(texturstein);
     }    
     
+    public int getx()
+    {
+        return x;
+    }
+    
+    public int gety()
+    {
+        return y;
+    }
+    
+    public int getz()
+    {
+        return z;
+    }
+    
     public void delete(){
         // GLOOP aktualisiert beim Loschen nicht die Sichtbarkeit
         kugel1.setzeSichtbarkeit(false);
