@@ -70,7 +70,7 @@ public class Main
             spieler.bewegdich();
             enemylist.toFirst();
             while (enemylist.hasAccess()) {
-                enemylist.next();
+                
                 if(spieler.getx() <= enemylist.getContent().getx()+50
                 && spieler.getx() >= enemylist.getContent().getx()-50
                 && spieler.gety() <= enemylist.getContent().gety()+50
@@ -79,7 +79,7 @@ public class Main
                 && spieler.getz() >= enemylist.getContent().getz()-50){
                    System.out.println("Gratulation"); 
                 }
-                
+                enemylist.next();
             }
             
             //Einzelne Konsolenseiten werden angezeigt(zum debugging)
