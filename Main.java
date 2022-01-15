@@ -8,6 +8,7 @@ public class Main
     Landschaft landschaft;
     Player spieler;
     Schneemann enemy;
+    Sys sys;
     // io
 
     GLTastatur t; // Tastatur
@@ -26,7 +27,8 @@ public class Main
     {   
         spieler = new Player();
         landschaft = new Landschaft();
-
+        
+        sys = new Sys();
         t = new GLTastatur();
         
         Random rand = new Random(); 
@@ -45,9 +47,6 @@ public class Main
 
     private void fuehreaus(){
         running = true;
-        //spieler.hoehe(30);
-        spieler.getvvert() = 0;
-        
         Random rand = new Random();
         System.out.println("Im Spiel + / - drücken, um durch Infos zu stöbern.");
         while(running){
@@ -69,6 +68,13 @@ public class Main
             
             //Kamera wird bewegt
             spieler.bewegdich();
+            
+            for (int i = 0; i < 1; i++) {
+                enemylist.next();
+                if(i == 49)enemylist.toFirst();
+                if(spieler.getx()<enemylist.getContent().x+50&& spieler.getx()>enemylist.getContent().x-50&&    spieler.gety()<enemylist.getContent().y+50&& spieler.gety()>enemylist.getContent().y-50 &&spieler.getz()<enemylist.getContent().z+50&& spieler.getz()>enemylist.getContent().z-50)System.out.println("Gratulation");
+                
+            }
             
             //Einzelne Konsolenseiten werden angezeigt(zum debugging)
             switch(seite)
@@ -127,14 +133,12 @@ public class Main
                 break;
             }
             
-            if(t.wurdeGedrueckt()){ 
+            if(t.wurdeGedrueckt()){       //Steuerung
                 switch(t.gibZeichen()){
                     case 'w':
                     spieler.pitch(1);
                     break;
-                    //case 's':
-                    //    spieler.gehe(-10);
-                    //    break;
+                    
                     case 's':
                         spieler.pitch(-1);
                         break;
@@ -145,8 +149,10 @@ public class Main
                         spieler.yaw(1);
                         break;
                     case 'o':
-                        spieler.power=spieler.power+5000;
-                        break;
+                        if(spieler.power < 30000){
+                            spieler.power=spieler.power+5000;
+                            break;
+                        }
                     case 'l':
                         if(spieler.power >= 5000){
                             spieler.power=spieler.power-5000;
@@ -161,12 +167,16 @@ public class Main
                         seite--;
                         if(seite<0)seite=4;
                         break;
+                    case '@': //programm wird per "@" geschlossen
+                        running=false;
+                        break;
                     default:
-                    System.out.println("Kein gültiges Zeichen");
+                    Sys.erstelleAusgabe("Kein gültiges Zeichen");
                     break;
                 }
             }
 
         }
+        sys.beenden();
     }
     }

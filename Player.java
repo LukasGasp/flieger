@@ -53,28 +53,16 @@ public class Player
         x = x+tempx;
         y = y+tempy;
         z = z+tempz;
-        //kamera0.setzeBlickpunkt(x-100, y, z);
-    }
-    
-    public void hoehe(double schwenk){
-        kamera0.schwenkeVertikal(schwenk);
-    }
-    
-    public void drehe(double schwenk){
-        //kamera0.rotiere(-schwenk, x, y, z, x, y, z);
-        kamera0.schwenkeHorizontal(schwenk);
+        
     }
     
     public void gehe(double amount){
-        //kamera0.setzePosition(x + tempx, y + tempy, z + tempz);
+        
         kamera0.vor(1);
         x=kamera0.gibX();
         y=kamera0.gibY();
         z=kamera0.gibZ();
-        //bewegeum(1.00,0.00,0.00);
-        //x = x + tempx;
-        //y = y + tempy;
-        //z = z + tempz;
+        
     }
     
     public void neuehorgesch(){
@@ -84,9 +72,10 @@ public class Player
         vside = 0;
     }
     
+    //FLugzeugphysics Start
+    
     public double vertbeschl(){
-        //System.out.println( lift*Math.cos(Math.toRadians(alpha)) * Math.cos(Math.toRadians(gamma))) ;
-        System.out.println(angleofattack());
+        
         return (            power*Math.sin(Math.toRadians(alpha)) 
                             - drag(vhor)
                             + lift(vhor)*Math.cos(Math.toRadians(alpha))*Math.cos(Math.toRadians(gamma))
@@ -139,6 +128,8 @@ public class Player
         return alpha - vertwinkelbewegung;
     }
     
+    //Flugzeugphysics Ende
+    
     public void bewegdich(){
         //kamera0.setzePosition(x + tempx, y + tempy, z + tempz);
         double tempx;
@@ -175,14 +166,11 @@ public class Player
         y=kamera0.gibY();
         z=kamera0.gibZ();
         letztezeit = System.currentTimeMillis();
-        //bewegeum(1.00,0.00,0.00);
-        //x = x + tempx;
-        //y = y + tempy;
-        //z = z + tempz;
+        
     }
     
     public void yaw(double winkel){
-        //kamera0.rotiere(5, 100, 100, 100, 0, 100, 0);
+        
         winkhorglob = winkhorglob + (int)winkel;
         ywinkel = Math.sin(Math.toRadians(winkvertglob)) * 100 + y;
         kamera0.setzeBlickpunkt(x+ Math.cos(Math.toRadians(winkhorglob))* Math.cos(Math.toRadians(winkvertglob)) *  100      ,ywinkel, z + Math.sin(Math.toRadians(winkhorglob))* Math.cos(Math.toRadians(winkvertglob))*100);
@@ -191,7 +179,7 @@ public class Player
         z=kamera0.gibZ();
     }
     public void pitch(double winkel){
-        //kamera0.rotiere(5, 100, 100, 100, 0, 100, 0);
+        
         winkvertglob = winkvertglob + (int)winkel;
         alpha = alpha + winkel;
         ywinkel = Math.sin(Math.toRadians(winkvertglob)) * 100 + y;
@@ -203,6 +191,7 @@ public class Player
         z=kamera0.gibZ();
     }
     
+    // Getter
     // Um Probleme mit Variablentypen vorzubeugen
     
     public int getx(){
@@ -223,5 +212,29 @@ public class Player
     
     public double getvhor(){
         return  vhor;
+    }
+    
+    public double getalpha(){
+        return  alpha;
+    }
+    
+     public double getbeta(){
+        return  beta;
+    }
+    
+     public double getgamma(){
+        return  gamma;
+    }
+    
+     public double getvertwinkelbewegung(){
+        return  vertwinkelbewegung;
+    }
+    
+     public double gethorwinkelbewegung(){
+        return  horwinkelbewegung;
+    }
+    
+     public double getvside(){
+        return  vside;
     }
 }
